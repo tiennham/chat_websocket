@@ -9,7 +9,7 @@ db.sqlite3
 **/venv
 **/virtualenv
 api/staticfiles/*
-static/*
+
 static_cdn/*
 media/*
 media_cdn/*
