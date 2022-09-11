@@ -9,12 +9,12 @@ db.sqlite3
 **/venv
 **/virtualenv
 api/staticfiles/*
-api/static/*
-api/static_cdn/*
-api/media/*
-api/media_cdn/*
+static/*
+static_cdn/*
+media/*
+media_cdn/*
 backups/*
-api/logs/*
+logs/*
 !api/logs/.gitkeep
 !backups/.gitkeep
 api/celerybeat*
