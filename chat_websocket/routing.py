@@ -16,7 +16,7 @@ application = ProtocolTypeRouter({
                 # path('chat/<room_id>/', ChatConsumer.as_asgi()),
                 path('chat/<room_id>/', ChatConsumer),
                 # path('', NotificationConsumer.as_asgi()),
-                path('', NotificationConsumer.as_asgi()),
+                path('', NotificationConsumer),
             ])
         )
     ),
