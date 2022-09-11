@@ -11,8 +11,8 @@ application = ProtocolTypeRouter({
     'websocket': AllowedHostsOriginValidator(
         AuthMiddlewareStack(
             URLRouter([
-                # path('public_chat/<room_id>/', PublicChatConsumer), # this same on the lesson but not working
-                path('public_chat/<room_id>/', PublicChatConsumer.as_asgi()),
+                path('public_chat/<room_id>/', PublicChatConsumer),  # this same on the lesson but not working on local
+                # path('public_chat/<room_id>/', PublicChatConsumer.as_asgi()), # this trick on stackoverflow
                 path('chat/<room_id>/', ChatConsumer.as_asgi()),
                 path('', NotificationConsumer.as_asgi()),
             ])
