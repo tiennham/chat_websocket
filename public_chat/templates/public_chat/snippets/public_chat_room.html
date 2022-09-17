@@ -169,6 +169,15 @@ PUBLIC CHAT
         console.log('Public ChatSocket error', e)
     }
 
+    public_chat_socket.onmessage = function(message) {
+        console.log("Got chat websocket message " + message.data);
+    };
+
+    public_chat_socket.addEventListener("open", function(e){
+        console.log("Public ChatSocket OPENv vvv ")
+    })
+
+
     if (public_chat_socket.readyState == WebSocket.OPEN) {
     	console.log("Public ChatSocket OPEN")
     } else if (public_chat_socket.readyState == WebSocket.CONNECTING){
